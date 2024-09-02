@@ -11,3 +11,20 @@ export function setupScrollIndicator() {
   scrollIndicator.style.zIndex = "1000";
   document.body.appendChild(scrollIndicator);
 }
+
+export function getScriptBaseUrl() {
+  // Получаем все теги <script> на странице
+  var scripts = document.getElementsByTagName("script");
+
+  // Последний скрипт в массиве — это тот, который выполняется
+  var currentScript = scripts[scripts.length - 1];
+
+  // Получаем полный URL текущего скрипта
+  var scriptURL = currentScript.src;
+
+  // Извлекаем путь к папке, где находится скрипт
+  var scriptPath = scriptURL.substring(0, scriptURL.lastIndexOf("/"));
+
+  // Добавляем / в конце и возвращаем
+  return scriptPath + "/";
+}

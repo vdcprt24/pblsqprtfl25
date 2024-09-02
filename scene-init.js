@@ -1,3 +1,5 @@
+import { getScriptBaseUrl } from "./util.js";
+
 export function setupVideoAnimation() {
   const startFrame = 0;
   const endFrame = 507; // Реальное количество кадров
@@ -8,6 +10,7 @@ export function setupVideoAnimation() {
 
   function updateImageSequence(progress) {
     // Рассчитываем текущий кадр на основе прогресса
+    let url = getScriptBaseUrl();
     let frameIndex =
       Math.floor(progress * (animationFrameCount - 1)) + startFrame;
 
@@ -17,7 +20,7 @@ export function setupVideoAnimation() {
     }
 
     const paddedIndex = String(frameIndex).padStart(3, "0");
-    imageElement.src = `frames_1/p1${paddedIndex}.webp`;
+    imageElement.src = `${url}frames_1/p1${paddedIndex}.webp`;
   }
 
   // Создаем единый таймлайн для смены кадров и появления текста

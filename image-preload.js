@@ -1,3 +1,5 @@
+import { getScriptBaseUrl } from "./util.js";
+
 export function preloadImages() {
   let imageUrls = generateImageUrls();
   let loadedImages = [];
@@ -11,12 +13,14 @@ export function preloadImages() {
 
 // Генерация списка изображений
 function generateImageUrls() {
+  let url = getScriptBaseUrl();
+
   let folder = "frames_1";
   let start = 1000;
   let end = 1507;
   let imageUrls = [];
   for (let i = start; i <= end; i++) {
-    imageUrls.push(`${folder}/p${i}.webp`);
+    imageUrls.push(`${url}${folder}/p${i}.webp`);
   }
   return imageUrls;
 }
