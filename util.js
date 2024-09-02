@@ -24,6 +24,7 @@ export function getScriptBaseUrl() {
 
   // Извлекаем путь к папке, где находится скрипт
   var scriptPath = scriptURL.substring(0, scriptURL.lastIndexOf("/"));
+  console.log(scriptPath);
 
   // Добавляем / в конце и возвращаем
   return scriptPath + "/";
