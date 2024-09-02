@@ -1,4 +1,5 @@
-export function preloadImages(imageUrls) {
+export function preloadImages() {
+  let imageUrls = generateImageUrls();
   let loadedImages = [];
   for (let i = 0; i < imageUrls.length; i++) {
     let img = new Image();
@@ -9,7 +10,10 @@ export function preloadImages(imageUrls) {
 }
 
 // Генерация списка изображений
-function generateImageUrls(folder, start, end) {
+function generateImageUrls() {
+  let folder = "frames_1";
+  let start = 1000;
+  let end = 1507;
   let imageUrls = [];
   for (let i = start; i <= end; i++) {
     imageUrls.push(`${folder}/p${i}.webp`);
@@ -18,8 +22,3 @@ function generateImageUrls(folder, start, end) {
 }
 
 // Пример использования
-let imagesToPreload = generateImageUrls("frames_1", 1000, 1507);
-
-window.onload = function () {
-  preloadImages(imagesToPreload);
-};
