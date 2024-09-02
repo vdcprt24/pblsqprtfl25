@@ -1,6 +1,5 @@
 import { setupVideoAnimation } from "./scene-init.js";
 import { setupScrollIndicator } from "./util.js";
-import { setupScrollIndicator } from "./util.js";
 import { preloadImages } from "./image-preload.js";
 import { initLenis } from "./lenis-init.js";
 
