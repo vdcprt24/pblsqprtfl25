@@ -1,0 +1,109 @@
+/* Desktop and Large Devices */
+@media only screen and (min-width: 1024px) {
+    #hero-content {
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .block {
+        font-size: 2.875rem; /* 46px */
+    }
+
+    #second-content p {
+        font-size: 3.125rem; /* 50px */
+    }
+
+    #third-heading {
+        font-size: 2.875rem; /* 46px */
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #hero-content {
+        width: 85vw;
+        height: 65vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block {
+        width: 100%;
+        text-align: center;
+        font-size: 2.25rem; /* 36px */
+        margin-bottom: 20px;
+    }
+
+    #second-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    #second-content p {
+        font-size: 2.625rem; /* 42px */
+    }
+
+    #third-heading {
+        font-size: 2.5rem; /* 40px */
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 767px) {
+    #hero-container {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #hero-content {
+        width: 90vw;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block {
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 6vw, 3rem); /* От 32px до 48px */
+        margin-bottom: 20px;
+    }
+
+    .block img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #second-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    #second-content p {
+        font-size: clamp(2.25rem, 5vw, 2.75rem); /* От 36px до 44px */
+        line-height: 1.5;
+    }
+
+    #third-heading {
+        font-size: clamp(2.25rem, 5vw, 2.75rem); /* От 36px до 44px */
+    }
+}
+
+/* Small Mobile Phones */
+@media only screen and (max-width: 480px) {
+    .block {
+        font-size: clamp(1.875rem, 7vw, 2.5rem); /* От 30px до 40px */
+    }
+
+    #second-content p {
+        font-size: clamp(2rem, 6vw, 2.5rem); /* От 32px до 40px */
+        line-height: 1.4;
+    }
+
+    #third-heading {
+        font-size: clamp(2rem, 6vw, 2.5rem); /* От 32px до 40px */
+    }
+}
