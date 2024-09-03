@@ -1,0 +1,17 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+#footer {
+    height: 80px; /* Высота футера */
+    background-color: transparent; /* Прозрачный фон, чтобы создать пустое пространство */
+    margin-top: 50px; /* Отступ сверху, если нужно разделить футер от предыдущего контента */
+}

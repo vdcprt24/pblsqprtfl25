@@ -1,7 +1,12 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/project.css" />
+        <link rel="stylesheet" href="css/p2.css" />
+        <link rel="stylesheet" href="css/square.css" />
+
         <meta
             http-equiv="Cache-Control"
             content="no-cache, no-store, must-revalidate"
@@ -14,6 +19,37 @@
         <script type="module" src="./main.js"></script>
     </head>
     <body>
+        <div id="hero-container">
+            <div id="hero-content">
+                <div class="block">Victor Diukov</div>
+                <div class="block">
+                    <img src="img/main.png" alt="Victor Diukov" />
+                </div>
+                <div class="block">A designer who loves technology</div>
+            </div>
+        </div>
+        <div id="second-section">
+            <div id="second-content">
+                <p>
+                    <span class="text-part" id="part-1">
+                        As technology rapidly evolves, it continuously shapes
+                        every aspect of our lives,</span
+                    >
+                    <span class="text-part" id="part-2">
+                        designers play a crucial role in making it accessible
+                        and intuitive,</span
+                    >
+                    <span class="text-part" id="part-3">
+                        ensuring users can live easier, more beautiful lives,
+                        and adapt seamlessly to the ever-changing digital
+                        landscape.</span
+                    >
+                </p>
+            </div>
+        </div>
+        <div id="third-section">
+            <span id="third-heading">Case Studies</span>
+        </div>
         <div id="p1-container">
             <div id="border"></div>
             <div id="text-overlay">
@@ -42,6 +78,43 @@
                 />
             </div>
         </div>
+
+        <div id="p2-container">
+            <div class="new-block">
+                <div class="text-content">
+                    <h2>Innovative Solutions</h2>
+                    <p>
+                        Our team develops innovative solutions that bridge the
+                        gap between technology and user needs.
+                    </p>
+                    <button class="text-button">Learn More</button>
+                </div>
+                <div class="image-content">
+                    <img
+                        src="path/to/your/image1.webp"
+                        alt="Innovative Solutions Image"
+                    />
+                </div>
+            </div>
+            <div class="new-block">
+                <div class="text-content">
+                    <h2>Scalable Design</h2>
+                    <p>
+                        We focus on scalable design systems that grow with your
+                        business, ensuring long-term success.
+                    </p>
+                    <button class="text-button">Explore More</button>
+                </div>
+                <div class="image-content">
+                    <img
+                        src="path/to/your/image2.webp"
+                        alt="Scalable Design Image"
+                    />
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+
         <div id="scroll-indicator"></div>
     </body>
 </html>

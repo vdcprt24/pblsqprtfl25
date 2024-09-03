@@ -16,6 +16,32 @@ export function getScriptBaseUrl() {
   if (window.location.hostname.includes("localhost")) {
     return "";
   }
-  console.log("m2");
   return "https://victorduco.github.io/portfolio24/";
+}
+
+export function hexToRgb(hex) {
+  const bigint = parseInt(hex.slice(1), 16);
+  return {
+    r: (bigint >> 16) & 255,
+    g: (bigint >> 8) & 255,
+    b: bigint & 255,
+  };
+}
+
+export function rgbToHex(r, g, b) {
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
+}
+
+export function interpolateColor(progress, startColorRGB, endColorRGB) {
+  return {
+    r: Math.round(
+      startColorRGB.r - progress * (startColorRGB.r - endColorRGB.r),
+    ),
+    g: Math.round(
+      startColorRGB.g - progress * (startColorRGB.g - endColorRGB.g),
+    ),
+    b: Math.round(
+      startColorRGB.b - progress * (startColorRGB.b - endColorRGB.b),
+    ),
+  };
 }
