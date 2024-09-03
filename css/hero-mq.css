@@ -1,13 +1,19 @@
 /* Desktop and Large Devices */
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1370px) {
     #hero-content {
-        width: 70vw;
+        width: 90vw;
         height: 70vh;
+        gap: 20px;
     }
 
     .block {
         font-size: 2.875rem; /* 46px */
+        height: 90%;
     }
+
+    .block img {
+            height: auto;
+            margin-bottom: 20px;
 
     #second-content p {
         font-size: 3.125rem; /* 50px */
@@ -19,24 +25,45 @@
 }
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     #hero-content {
-        width: 85vw;
+        width: 95vw;
         height: 65vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
+
     }
+
 
     .block {
         width: 100%;
         text-align: center;
-        font-size: 2.25rem; /* 36px */
+        font-size: 3.25rem; /* 36px */
         margin-bottom: 20px;
     }
 
+    .block:first-child {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block:last-child {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .block img {
+            width: 40% !important; /* Уменьшение ширины изображения до 50% с использованием !important */
+            height: auto;
+            margin-bottom: 20px;
+
     #second-content {
         width: 90%;
+        height: 65vh;
         text-align: center;
     }
 
@@ -52,7 +79,7 @@
 /* Mobile Phones */
 @media only screen and (max-width: 767px) {
     #hero-container {
-        height: auto;
+        height: auto !important;
         padding: 20px 0;
     }
 
@@ -63,18 +90,27 @@
         justify-content: center;
         align-items: center;
     }
+    .block:first-child {
+        margin-top: 60px;
+    }
 
     .block {
         width: 100%;
         text-align: center;
-        font-size: clamp(2rem, 6vw, 3rem); /* От 32px до 48px */
+        font-size: clamp(1rem, 4vw, 2rem); /* От 32px до 48px */
         margin-bottom: 20px;
+        justify-content: center !important;
     }
 
     .block img {
-        width: 80%;
+        width: 50% !important; /* Уменьшение ширины изображения до 50% с использованием !important */
         height: auto;
         margin-bottom: 20px;
+    }
+
+    #second-section {
+        height: 80vh; /* Уменьшение высоты второго блока на 25% */
+        padding-top: 40vh;
     }
 
     #second-content {
@@ -95,7 +131,19 @@
 /* Small Mobile Phones */
 @media only screen and (max-width: 480px) {
     .block {
-        font-size: clamp(1.875rem, 7vw, 2.5rem); /* От 30px до 40px */
+        width: 80% !important;
+        font-size: 1rem; /* От 30px до 40px */
+        text-align: center !important;
+    }
+
+    .block img {
+        width: 80% !important; /* Дополнительное уменьшение ширины до 45% с использованием !important */
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #second-section {
+        height: 75vh; /* Сохранение уменьшенной высоты для маленьких экранов */
     }
 
     #second-content p {

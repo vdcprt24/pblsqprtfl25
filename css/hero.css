@@ -1,8 +1,3 @@
-/* Base font size for rem calculation */
-html {
-    font-size: 16px; /* 1rem = 16px */
-}
-
 /* First Section */
 #hero-container {
     width: 100%;
