@@ -1,7 +1,7 @@
 import { getScriptBaseUrl } from "./util.js";
 
 export function setupVideoAnimation() {
-  const startFrame = 0;
+  const startFrame = 250;
   const endFrame = 507; // Реальное количество кадров
   const animationEndFrame = 600; // Кадр, до которого будет тянуться анимация
   const frameCount = endFrame - startFrame + 1;
@@ -28,7 +28,7 @@ export function setupVideoAnimation() {
     scrollTrigger: {
       trigger: "#p1-container",
       start: "top top",
-      end: "bottom+=1500vh",
+      end: "bottom+=200vh",
       scrub: true,
       pin: true,
       markers: true,
