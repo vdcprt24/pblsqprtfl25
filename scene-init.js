@@ -31,7 +31,7 @@ export function setupVideoAnimation() {
       end: "bottom+=200vh",
       scrub: true,
       pin: true,
-      markers: true,
+      // markers: true,
       onUpdate: (self) => {
         updateImageSequence(self.progress);
         const scrollIndicator = document.getElementById("scroll-indicator");

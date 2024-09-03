@@ -12,7 +12,7 @@ window.onload = function () {
   setupHeroScroll();
 
   setupVideoAnimation();
-  setupScrollIndicator();
+  // setupScrollIndicator();
 
   // Инициализация Lenis для плавной прокрутки
   initLenis();

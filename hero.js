@@ -24,9 +24,10 @@ function onScroll() {
 
 function handleScroll(scrollPosition) {
   changeBackgroundOnScroll(scrollPosition);
-  setElementTransition(scrollPosition, "part-2", 0, 1, 1.5, 1.6);
-  setElementTransition(scrollPosition, "part-3", 0, 1, 1.7, 1.8);
+  setElementTransition(scrollPosition, "part-2", 0, 1, 1.4, 1.5);
+  setElementTransition(scrollPosition, "part-3", 0, 1, 1.6, 1.7);
   setElementTransition(scrollPosition, "second-section", 1, 0, 2.1, 2.2);
-  setElementTransition(scrollPosition, "third-section", 0, 1, 2.1, 2.3);
+  setElementTransition(scrollPosition, "third-heading", 0, 1, 2.1, 2.3);
+  setElementTransition(scrollPosition, "arrow-icon", 0, 1, 2.3, 2.5);
   setElementTransition(scrollPosition, "p1-container", 0, 1, 3.2, 3.4);
 }
