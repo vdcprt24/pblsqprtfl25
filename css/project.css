@@ -43,7 +43,7 @@
 #part2,
 #text-overlay p,
 #text-overlay button,
-#text-overlay div {
+#text-overlay span {
     opacity: 0;
 }
 
@@ -73,7 +73,6 @@
 }
 
 #headline1 {
-    font-family: "Inter", sans-serif; /* Использовать шрифт Open Sans */
     font-size: 56px; /* Размер шрифта для заголовка */
     font-weight: 500; /* Полужирный шрифт для заголовка */
     margin-top: 10px; /* Отступ снизу для заголовка */

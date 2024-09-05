@@ -16,3 +16,13 @@ html {
     background-color: transparent; /* Прозрачный фон, чтобы создать пустое пространство */
     margin-top: 50px; /* Отступ сверху, если нужно разделить футер от предыдущего контента */
 }
+
+span.text-gradient {
+    font-weight: 700; /* bold */
+    background-image: linear-gradient(122deg, #00dbde 0%, #fc00ff 100%);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 10s ease infinite;
+}

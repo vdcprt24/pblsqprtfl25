@@ -53,18 +53,14 @@ export function setupVideoAnimation() {
 
   // Анимация появления текстовых блоков в конце видео-анимации
   masterTimeline
-    .to("#part1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.7") // Появление заголовка 1 на 90% анимации
-    .to("#part2", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.8") // Появление заголовка 2 на 95% анимации
-    .to(
-      "#cta-button",
-      { opacity: 1, duration: 0.1, ease: "power1.inOut" },
-      "0.9",
-    ) // Появление заголовка 2 на 95% анимации
-    .to("#tags", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.9") // Появление заголовка 2 на 95% анимации
+    .to("#part1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.6") // Появление заголовка 1 на 90% анимации
+    .to("#part2", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.7") // Появление заголовка 2 на 95% анимации
     .to(
       "#description",
       { opacity: 1, duration: 0.1, ease: "power1.inOut" },
-      "0.9",
+      "0.75",
     )
+    .to(".anim-1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.8") // Появление заголовка 2 на 95% анимации
+    .to(".anim-2", { opacity: 1, duration: 0.3, ease: "power1.inOut" }, "0.8") // Появление заголовка 2 на 95% анимации
     .to("#border", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "1");
 }

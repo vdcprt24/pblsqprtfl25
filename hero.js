@@ -1,4 +1,8 @@
-import { changeBackgroundOnScroll, setElementTransition } from "./hero-util.js";
+import {
+  changeBackgroundOnScroll,
+  setElementTransition,
+  applyParallaxEffect,
+} from "./hero-util.js";
 
 export function setupHeroScroll() {
   window.addEventListener("scroll", onScroll);
@@ -24,10 +28,14 @@ function onScroll() {
 
 function handleScroll(scrollPosition) {
   changeBackgroundOnScroll(scrollPosition);
+  // applyParallaxEffect(scrollPosition, "block-1", 0.6, 0.5);
+  // applyParallaxEffect(scrollPosition, "block-2", 0.2, 0.5);
+  // applyParallaxEffect(scrollPosition, "block-3", -0.3, 0.5);
   setElementTransition(scrollPosition, "part-2", 0, 1, 1.4, 1.5);
   setElementTransition(scrollPosition, "part-3", 0, 1, 1.6, 1.7);
   setElementTransition(scrollPosition, "second-section", 1, 0, 2.1, 2.2);
   setElementTransition(scrollPosition, "third-heading", 0, 1, 2.1, 2.3);
   setElementTransition(scrollPosition, "arrow-icon", 0, 1, 2.3, 2.5);
+  applyParallaxEffect(scrollPosition, "arrow-icon", 0.4, 2.3);
   setElementTransition(scrollPosition, "p1-container", 0, 1, 3.2, 3.4);
 }
