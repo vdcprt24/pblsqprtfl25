@@ -9,6 +9,9 @@ html {
     background-color: #ffffff;
     overflow-x: hidden;
     font-size: 16px; /* 1rem = 16px */
+    transition: none !important; /* Отключаем все переходы для всех элементов */
+    animation: none !important;
+    will-change: background-color;
 }
 
 #footer {
@@ -25,4 +28,27 @@ span.text-gradient {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient-animation 10s ease infinite;
+}
+
+#scroll-indicator {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    color: white;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

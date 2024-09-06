@@ -32,17 +32,7 @@
     margin: 0;
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+/* Second Section */
 
 #block-2 {
     display: flex;
@@ -55,7 +45,7 @@
     height: calc(100% - 2rem); /* Высота с учетом отступов */
     object-fit: contain;
     margin: 0 1rem; /* Отступ слева и справа */
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 #block-3 a {

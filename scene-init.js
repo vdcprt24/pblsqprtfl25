@@ -1,16 +1,39 @@
 import { getScriptBaseUrl } from "./util.js";
+import { preloadImages } from "./image-preload.js";
 
-export function setupVideoAnimation() {
+const MIN_SCREEN_WIDTH = 576; // Минимальный размер экрана
+let masterTimeline; // Переменная для хранения таймлайна
+
+export function initVideoAnimation() {
+  if (window.innerWidth >= MIN_SCREEN_WIDTH) {
+    gsap.registerPlugin(ScrollTrigger);
+    let loadedImages;
+    loadedImages = preloadImages();
+    setupVideoAnimation(loadedImages);
+  } else {
+    // Если ширина экрана меньше минимального размера, не инициализируем анимацию
+    document.querySelector("#p1-background").style.opacity = 1;
+    document.querySelector("#part1").style.opacity = 1;
+    document.querySelector("#part2").style.opacity = 1;
+    document.querySelector("#tags").style.opacity = 1;
+    document.querySelector("#cta-button").style.opacity = 1;
+    if (masterTimeline) {
+      masterTimeline.kill(); // Убиваем таймлайн
+    }
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }
+}
+
+export function setupVideoAnimation(loadedImages) {
   const startFrame = 250;
-  const endFrame = 507; // Реальное количество кадров
-  const animationEndFrame = 600; // Кадр, до которого будет тянуться анимация
+  const endFrame = 507;
+  const animationEndFrame = 600;
   const frameCount = endFrame - startFrame + 1;
   const animationFrameCount = animationEndFrame - startFrame + 1;
   const imageElement = document.getElementById("image-sequence");
 
   function updateImageSequence(progress) {
     // Рассчитываем текущий кадр на основе прогресса
-    let url = getScriptBaseUrl();
     let frameIndex =
       Math.floor(progress * (animationFrameCount - 1)) + startFrame;
 
@@ -19,12 +42,12 @@ export function setupVideoAnimation() {
       frameIndex = endFrame;
     }
 
-    const paddedIndex = String(frameIndex).padStart(3, "0");
-    imageElement.src = `${url}frames_1/p1${paddedIndex}.webp`;
+    // Используем предзагруженные изображения из массива loadedImages
+    imageElement.src = loadedImages[frameIndex - startFrame].src;
   }
 
   // Создаем единый таймлайн для смены кадров и появления текста
-  const masterTimeline = gsap.timeline({
+  masterTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: "#p1-container",
       start: "top top",
@@ -53,14 +76,17 @@ export function setupVideoAnimation() {
 
   // Анимация появления текстовых блоков в конце видео-анимации
   masterTimeline
-    .to("#part1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.6") // Появление заголовка 1 на 90% анимации
-    .to("#part2", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.7") // Появление заголовка 2 на 95% анимации
     .to(
-      "#description",
-      { opacity: 1, duration: 0.1, ease: "power1.inOut" },
-      "0.75",
+      "#p1-background",
+      { opacity: 1, duration: 0.3, ease: "power1.inOut" },
+      "0.1",
     )
-    .to(".anim-1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.8") // Появление заголовка 2 на 95% анимации
-    .to(".anim-2", { opacity: 1, duration: 0.3, ease: "power1.inOut" }, "0.8") // Появление заголовка 2 на 95% анимации
-    .to("#border", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "1");
+    .to("#part1", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.5")
+    .to("#part2", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.6")
+    .to("#tags", { opacity: 1, duration: 0.1, ease: "power1.inOut" }, "0.8")
+    .to(
+      "#cta-button",
+      { opacity: 1, duration: 0.1, ease: "power1.inOut" },
+      "0.8",
+    );
 }

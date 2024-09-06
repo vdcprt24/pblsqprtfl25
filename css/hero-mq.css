@@ -1,65 +1,95 @@
-/* Desktop and Large Devices */
-@media only screen and (max-width: 1370px) {
-    #second-content p {
-        font-size: 3.125rem; /* 50px */
+/* mob phones */
+
+@media (max-width: 576px) {
+    #hero-container {
+        flex-direction: column; /* Смена направления флексов на колонку */
+        justify-content: space-around; /* Выровнять контент по началу */
+        padding: 20% 3%; /* Увеличить отступы */
     }
 
-    #third-heading {
-        font-size: 2.875rem; /* 46px */
-    }
-}
-
-/* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    #second-content {
-        width: 90%;
-        height: 65vh;
-        text-align: center;
+    #hero-content {
+        align-items: center;
     }
 
-    #second-content p {
-        font-size: 2.625rem; /* 42px */
+    .block {
+        width: 100%; /* Блок занимает всю ширину */
+        margin-bottom: 20px; /* Добавить отступы между блоками */
     }
 
-    #third-heading {
-        font-size: 2.5rem; /* 40px */
+    #block-1 h1 {
+        font-size: 3rem; /* Уменьшить размер шрифта */
+        line-height: 3.5rem; /* Соответствующая высота строки */
     }
-}
 
-/* Mobile Phones */
-@media only screen and (max-width: 767px) {
+    #block-2 {
+        display: none; /* Скрыть изображение */
+    }
+
+    /* 2nd section */
+
     #second-section {
-        height: 80vh; /* Уменьшение высоты второго блока на 25% */
-        padding-top: 40vh;
+        margin-top: 30%;
+        align-items: center; /* Центрировать контент по вертикали */
+        padding: 2rem 1rem; /* Добавить внутренние отступы */
     }
 
     #second-content {
-        width: 90%;
-        text-align: center;
+        width: 100%; /* Контент занимает всю ширину */
+        margin-bottom: 1rem; /* Уменьшить отступ снизу */
     }
 
     #second-content p {
-        font-size: clamp(2.25rem, 5vw, 2.75rem); /* От 36px до 44px */
-        line-height: 1.5;
+        font-size: 2rem; /* Уменьшить размер шрифта */
+        line-height: 2.5rem; /* Слегка уменьшить высоту строки */
+    }
+
+    .text-part {
+        transition: opacity 0.5s ease; /* Более быстрая анимация */
+    }
+
+    #part-2,
+    #part-3 {
+        opacity: 0; /* Без изменений */
+    }
+
+    /* 3rd section */
+
+    #third-section {
+        height: auto; /* Высота по содержимому */
+        padding: 2rem 1rem; /* Добавить внутренние отступы */
     }
 
     #third-heading {
-        font-size: clamp(2.25rem, 5vw, 2.75rem); /* От 36px до 44px */
+        font-size: 2rem; /* Уменьшить размер шрифта */
+        line-height: 2.5rem; /* Соответствующая высота строки */
+        text-align: center; /* Оставить текст центрированным */
+        opacity: 1; /* Сделать заголовок видимым, если это необходимо */
+    }
+
+    .centered-image {
+        width: 100%; /* Занять всю ширину */
+        margin-top: 1rem; /* Добавить отступ сверху */
+    }
+
+    #arrow-icon {
+        margin-top: 1rem; /* Уменьшить отступ сверху */
+        max-width: 50px; /* Уменьшить ширину изображения на мобильных */
+        opacity: 1; /* Сделать изображение видимым, если это необходимо */
     }
 }
 
-/* Small Mobile Phones */
-@media only screen and (max-width: 480px) {
-    #second-section {
-        height: 75vh; /* Сохранение уменьшенной высоты для маленьких экранов */
-    }
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Стили для маленьких планшетов */
+}
 
-    #second-content p {
-        font-size: clamp(2rem, 6vw, 2.5rem); /* От 32px до 40px */
-        line-height: 1.4;
-    }
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Стили для планшетов и маленьких ноутбуков */
+}
 
-    #third-heading {
-        font-size: clamp(2rem, 6vw, 2.5rem); /* От 32px до 40px */
-    }
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Стили для ноутбуков и больших планшетов */
+}
+
+@media (min-width: 1201px) {
+    /* Стили для больших экранов и десктопов */
 }

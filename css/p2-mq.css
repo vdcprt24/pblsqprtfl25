@@ -1,0 +1,24 @@
+@media (max-width: 576px) {
+    #p2-container {
+        flex-direction: column; /* Смена направления на колонку */
+        gap: 3rem; /* Увеличение промежутка между блоками */
+    }
+
+    .new-block {
+        width: 100%; /* Каждый блок занимает всю ширину */
+    }
+
+    /* Уменьшаем размер текста */
+    .text-content h2 {
+        font-size: 1.5rem; /* Уменьшение размера заголовка */
+        line-height: 2.25rem; /* Соответствующая высота строки */
+    }
+
+    .text-content .project-details {
+        font-size: 1rem; /* Уменьшение размера текста для деталей */
+    }
+
+    .project-link {
+        font-size: 1.125rem; /* Уменьшение размера текста для ссылки */
+    }
+}

@@ -1,57 +1,73 @@
+/* Основной контейнер с отступами */
 #p2-container {
     display: flex;
     justify-content: space-between;
-    width: 92.7vw; /* Ширина контейнера для согласованности с #p1-container */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 0; /* Убираем внутренний отступ */
-    box-sizing: border-box; /* Убедимся, что padding включен в ширину */
-    gap: 60px; /* Отступ между блоками */
+    gap: 4rem;
+    padding: 0 5%; /* Отступы 5% слева и справа */
 }
 
+/* Блоки */
 .new-block {
     display: flex;
-    align-items: center;
-    width: calc(
-        50% - 10px - 10px
-    ); /* Уменьшаем ширину блоков, учитывая отступ между ними */
-    padding: 20px;
-    border-radius: 30px;
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    flex-direction: column;
+    align-items: flex-start; /* Текст по левому краю */
+    width: 100%;
 }
 
-.text-content {
-    flex: 1;
-    color: #ffffff;
+.image-content {
+    width: 100%; /* Картинки занимают 100% ширины блока */
 }
 
-.text-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.text-content p {
-    font-size: 16px;
-    line-height: 150%;
-    margin-bottom: 20px;
-}
-
-.text-button {
-    background-color: #5852d6;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.text-button:hover {
-    background-color: #e65b55;
-}
-
+/* Картинки */
 .image-content img {
-    max-width: 150px; /* Ограничение ширины изображения */
-    border-radius: 10px; /* Закругление краев изображения */
-    margin-left: 20px; /* Отступ между текстом и картинкой */
+    width: 100%; /* Картинки занимают 100% ширины блока */
+    height: auto; /* Пропорциональная высота */
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Стили для текста */
+.text-content {
+    margin-top: 1.25rem; /* 20px в рамах */
+    text-align: left; /* Текст по левому краю */
+    color: black; /* Чёрный текст */
+}
+
+/* Дополнительная информация о проекте */
+.text-content .project-details {
+    font-size: 1.1875rem; /* 19px в рамах */
+    color: black; /* Чёрный текст */
+    margin-bottom: 0.625rem; /* 10px в рамах */
+    font-weight: 500; /* Medium стиль */
+    letter-spacing: 1%; /* Межбуквенное расстояние */
+}
+
+/* Заголовки */
+.text-content h2 {
+    font-size: 1.875rem; /* 30px в рамах */
+    font-weight: 600; /* Semibold стиль */
+    margin-bottom: 0.9375rem; /* 15px в рамах */
+    color: black; /* Чёрный текст */
+    line-height: 2.8125rem; /* Межстрочное расстояние 45px в рамах */
+}
+
+/* Ссылка на проект */
+.project-link {
+    font-size: 1.375rem; /* 22px в рамах */
+    font-weight: 500; /* Medium стиль */
+    color: black; /* Чёрный текст */
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 1%; /* Межбуквенное расстояние */
+}
+
+/* Эффект на стрелку в ссылке */
+.project-link::after {
+    content: "→";
+    margin-left: 0.3125rem; /* 5px в рамах */
+    transition: margin-left 0.3s;
+}
+
+.project-link:hover::after {
+    margin-left: 0.625rem; /* 10px в рамах */
 }

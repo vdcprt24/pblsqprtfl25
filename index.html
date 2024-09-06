@@ -3,8 +3,10 @@
     <head>
         <link rel="stylesheet" href="css/global.css" />
         <link rel="stylesheet" href="css/hero.css" />
-        <link rel="stylesheet" href="css/project.css" />
+        <link rel="stylesheet" href="css/p1.css" />
+        <link rel="stylesheet" href="css/p1-mq.css" />
         <link rel="stylesheet" href="css/p2.css" />
+        <link rel="stylesheet" href="css/p2-mq.css" />
         <link rel="stylesheet" href="css/square.css" />
         <link rel="stylesheet" href="css/hero-mq.css" />
 
@@ -78,25 +80,27 @@
                 <img src="img/arrow.svg" alt="Arrow Icon" id="arrow-icon" />
             </div>
         </div>
+
         <div id="p1-container">
-            <div id="border"></div>
-            <div id="text-overlay">
-                <div id="tags">
-                    <span class="anim-1">FinTech</span>
-                    <span class="anim-1">User Research</span>
-                    <span class="anim-2">Conversation Design</span>
+            <div id="p1-background"></div>
+            <div id="p1-content">
+                <div class="text-block" id="tags">
+                    UX Research in AI / Conversation Design / FinTech
                 </div>
-                <h1 id="headline1">
-                    <span id="part1">Empowering Professionals</span>
-                    <span id="part2">using Advanced AI Capabilities</span>
+                <h1 class="text-block" id="headline1">
+                    <span id="part1"
+                        >Empowering FinTech <br />Professionals</span
+                    >
+                    <span id="part2">with Advanced <br />AI Capabilities</span>
                 </h1>
-                <p id="description">
-                    Combining advanced AI with detailed UX research, this
-                    project empowers professionals by creating innovative,
-                    user-driven solutions that redefine digital experiences in
-                    the modern era.
-                </p>
-                <button class="anim-2" id="cta-button">Open Project</button>
+                <button class="text-block" id="cta-button">
+                    Open Project
+                    <img
+                        id="arrow-icon"
+                        src="img/arrow-right.svg"
+                        alt="Arrow Icon"
+                    />
+                </button>
             </div>
             <div id="image-sequence-container">
                 <img
@@ -108,39 +112,41 @@
         </div>
 
         <div id="p2-container">
+            <!-- Первый блок -->
             <div class="new-block">
-                <div class="text-content">
-                    <h2>Innovative Solutions</h2>
-                    <p>
-                        Our team develops innovative solutions that bridge the
-                        gap between technology and user needs.
-                    </p>
-                    <button class="text-button">Learn More</button>
-                </div>
                 <div class="image-content">
-                    <img
-                        src="path/to/your/image1.webp"
-                        alt="Innovative Solutions Image"
-                    />
+                    <img src="img/p2-1.png" alt="FinTech Project Image" />
+                </div>
+                <div class="text-content">
+                    <p class="project-details">
+                        UX Research in AI / Conversation Design / FinTech
+                    </p>
+                    <h2>
+                        Empowering FinTech Professionals with Advanced AI
+                        Capabilities
+                    </h2>
+                    <a href="#" class="project-link">Open Project</a>
                 </div>
             </div>
+
+            <!-- Второй блок -->
             <div class="new-block">
-                <div class="text-content">
-                    <h2>Scalable Design</h2>
-                    <p>
-                        We focus on scalable design systems that grow with your
-                        business, ensuring long-term success.
-                    </p>
-                    <button class="text-button">Explore More</button>
-                </div>
                 <div class="image-content">
-                    <img
-                        src="path/to/your/image2.webp"
-                        alt="Scalable Design Image"
-                    />
+                    <img src="img/p2-2.png" alt="FinTech Project Image" />
+                </div>
+                <div class="text-content">
+                    <p class="project-details">
+                        UX Research in AI / Conversation Design / FinTech
+                    </p>
+                    <h2>
+                        Empowering FinTech Professionals with Advanced AI
+                        Capabilities
+                    </h2>
+                    <a href="#" class="project-link">Open Project</a>
                 </div>
             </div>
         </div>
+
         <div id="footer"></div>
 
         <!-- <div id="scroll-indicator"></div> -->

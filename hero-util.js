@@ -1,61 +1,102 @@
 import { hexToRgb, rgbToHex, interpolateColor } from "./util.js";
 
+// Массив для хранения всех рассчитанных цветов
+let colorMapCache = [];
+let lastAppliedColor = null;
+
 function defineColorMap() {
   const screenHeight = window.innerHeight;
+  let p1StartPostion = 3.2;
+
+  if (window.innerWidth <= 576) {
+    p1StartPostion = 2.5;
+  }
 
   const colorMap = [
-    { end: 1.1 * screenHeight, color: "#FFFFFF" },
+    { start: 0, end: 1.1 * screenHeight, color: "#FFFFFF" },
     {
-      start: 1.2 * screenHeight,
+      start: 1.1 * screenHeight,
       end: 1.6 * screenHeight,
       startColor: "#FFFFFF",
       endColor: "#000000",
     },
-    // { start: 1.5 * screenHeight, end: 3 * screenHeight, color: "#000000" },
-    // {
-    //   start: 3 * screenHeight,
-    //   end: 3.2 * screenHeight,
-    //   startColor: "#000000",
-    //   endColor: "#2B2E35",
-    // },
-    // { start: 3.2 * screenHeight, color: "#2B2E35" },
-    { start: 1.5 * screenHeight, color: "#000000" },
+    {
+      start: 1.6 * screenHeight,
+      end: p1StartPostion * screenHeight,
+      color: "#000000",
+    },
+    {
+      start: p1StartPostion * screenHeight,
+      end: (p1StartPostion + 0.2) * screenHeight,
+      startColor: "#000000",
+      endColor: "#FFFFFF",
+    },
+    {
+      start: (p1StartPostion + 0.2) * screenHeight,
+      end: Infinity,
+      color: "#FFFFFF",
+    },
   ];
+
   return colorMap;
 }
 
-export function changeBackgroundOnScroll(scrollPosition) {
-  let appliedColor = null;
+// Предвычисляем все цвета для позиций прокрутки
+export function calculateColors() {
+  const screenHeight = window.innerHeight;
   const colorMap = defineColorMap();
 
-  for (let i = 0; i < colorMap.length; i++) {
-    const entry = colorMap[i];
+  for (let i = 0; i <= screenHeight * 4; i++) {
+    let appliedColor = null;
 
-    if (entry.end && scrollPosition <= entry.end) {
-      if (entry.start !== undefined && scrollPosition >= entry.start) {
-        if (entry.startColor && entry.endColor) {
-          const progress =
-            (scrollPosition - entry.start) / (entry.end - entry.start);
-          const startColorRGB = hexToRgb(entry.startColor);
-          const endColorRGB = hexToRgb(entry.endColor);
-          const colorValue = interpolateColor(
-            progress,
-            startColorRGB,
-            endColorRGB,
-          );
-          appliedColor = rgbToHex(colorValue.r, colorValue.g, colorValue.b);
-        }
+    // Находим соответствующий диапазон
+    const entry = colorMap.find(({ start, end }) => i >= start && i <= end);
+
+    if (entry) {
+      if (entry.startColor && entry.endColor) {
+        const progress = (i - entry.start) / (entry.end - entry.start);
+        const startColorRGB = hexToRgb(entry.startColor);
+        const endColorRGB = hexToRgb(entry.endColor);
+        const colorValue = interpolateColor(
+          progress,
+          startColorRGB,
+          endColorRGB,
+        );
+        appliedColor = rgbToHex(colorValue.r, colorValue.g, colorValue.b);
       } else if (entry.color) {
         appliedColor = entry.color;
       }
-      break;
     }
-  }
 
-  if (appliedColor) {
-    document.body.style.backgroundColor = appliedColor;
+    // Добавляем рассчитанный цвет в кэш
+    colorMapCache[i] = appliedColor;
   }
 }
+
+// Функция для смены фона при прокрутке
+export function changeBackgroundOnScroll(scrollPosition) {
+  const screenHeight = window.innerHeight;
+
+  // Ограничение позиции скролла в пределах предвычисленных значений
+  let adjustedPosition = Math.min(scrollPosition, screenHeight * 4);
+
+  adjustedPosition = Math.round(adjustedPosition);
+
+  const appliedColor = colorMapCache[adjustedPosition];
+
+  // Проверяем, изменился ли цвет, и только тогда обновляем фон
+  if (appliedColor && appliedColor !== lastAppliedColor) {
+    requestAnimationFrame(() => {
+      document.body.style.backgroundColor = appliedColor;
+    });
+    lastAppliedColor = appliedColor;
+  }
+}
+
+// Вызываем функцию для предвычисления цветов при загрузке страницы
+window.addEventListener("load", () => {
+  calculateColors();
+});
 
 export function setElementTransition(
   scrollPosition,
@@ -69,7 +110,6 @@ export function setElementTransition(
   const element = document.getElementById(elementId);
 
   if (!element) {
-    console.error(`Element with ID "${elementId}" not found.`);
     return;
   }
 
@@ -96,21 +136,15 @@ export function applyParallaxEffect(
   const element = document.getElementById(elementId);
 
   if (!element) {
-    console.error(`Element with ID "${elementId}" not found.`);
     return;
   }
 
   const start = screenHeight * startCoefficient;
 
-  // Проверяем, началась ли прокрутка для параллакса
   if (scrollPosition >= start) {
-    // Рассчитываем смещение для параллакса
     const offset = (scrollPosition - start) * parallaxSpeed;
-
-    // Применяем смещение к элементу
     element.style.transform = `translateY(${offset}px)`;
   } else {
-    // Если прокрутка до начала параллакса, сбрасываем смещение
     element.style.transform = `translateY(0px)`;
   }
 }

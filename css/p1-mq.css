@@ -1,0 +1,36 @@
+@media (max-width: 576px) {
+    #image-sequence-container {
+        display: none; /* Полностью скрыть контейнер с изображением */
+    }
+
+    #p1-background {
+    }
+
+    #p1-container,
+    #p1-content {
+        padding: 0 5%; /* Отступы 5% слева и справа */
+        width: auto;
+        height: auto; /* Высота по содержимому */
+    }
+
+    #p1-content .text-block {
+        margin-left: 0; /* Убираем отступ слева для текста */
+        margin-top: 1rem; /* Добавляем небольшой отступ сверху */
+        margin-bottom: 1rem; /* Добавляем отступ снизу */
+    }
+
+    #tags {
+        font-size: 1rem; /* Уменьшаем размер шрифта */
+        max-width: 100%; /* Заголовок занимает всю ширину */
+    }
+
+    #headline1 {
+        font-size: 2rem; /* Уменьшаем размер шрифта */
+        line-height: 2.5rem; /* Соответствующая высота строки */
+    }
+
+    #cta-button {
+        font-size: 1.2rem; /* Уменьшаем размер шрифта */
+        margin-bottom: 1rem; /* Уменьшаем отступ снизу */
+    }
+}

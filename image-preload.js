@@ -16,11 +16,11 @@ function generateImageUrls() {
   let url = getScriptBaseUrl();
 
   let folder = "frames_1";
-  let start = 1000;
-  let end = 1507;
+  let start = 205;
+  let end = 507;
   let imageUrls = [];
   for (let i = start; i <= end; i++) {
-    imageUrls.push(`${url}${folder}/p${i}.webp`);
+    imageUrls.push(`${url}${folder}/p1${i}.webp`);
   }
   return imageUrls;
 }

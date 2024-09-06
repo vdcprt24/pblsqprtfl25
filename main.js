@@ -1,19 +1,17 @@
-import { setupVideoAnimation } from "./scene-init.js";
+import { initVideoAnimation } from "./scene-init.js";
 import { setupScrollIndicator } from "./util.js";
-import { preloadImages } from "./image-preload.js";
 import { initLenis } from "./lenis-init.js";
 import { setupHeroScroll } from "./hero.js";
-
-gsap.registerPlugin(ScrollTrigger);
+import { calculateColors } from "./hero-util.js";
 
 window.onload = function () {
   window.scrollTo(0, 0);
-  preloadImages();
+  initVideoAnimation();
   setupHeroScroll();
-
-  setupVideoAnimation();
+  calculateColors();
   // setupScrollIndicator();
 
-  // Инициализация Lenis для плавной прокрутки
   initLenis();
 };
+
+window.addEventListener("resize", initVideoAnimation);
