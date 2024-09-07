@@ -128,12 +128,11 @@
     font-weight: 600; /* semibold */
     letter-spacing: 2%;
     text-align: center;
-    color: #fff;
     opacity: 0;
 }
 
 .centered-image {
-    display: flex;
+    display: none;
     justify-content: center; /* Центрируем изображение */
     width: 100%; /* Заставляем div занимать всю ширину */
 }

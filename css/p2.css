@@ -39,7 +39,7 @@
     color: black; /* Чёрный текст */
     margin-bottom: 0.625rem; /* 10px в рамах */
     font-weight: 500; /* Medium стиль */
-    letter-spacing: 1%; /* Межбуквенное расстояние */
+    letter-spacing: 0.01rem;
 }
 
 /* Заголовки */
@@ -47,8 +47,8 @@
     font-size: 1.875rem; /* 30px в рамах */
     font-weight: 600; /* Semibold стиль */
     margin-bottom: 0.9375rem; /* 15px в рамах */
-    color: black; /* Чёрный текст */
     line-height: 2.8125rem; /* Межстрочное расстояние 45px в рамах */
+    color: black; /* Чёрный текст */
 }
 
 /* Ссылка на проект */

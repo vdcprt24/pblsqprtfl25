@@ -3,14 +3,24 @@
         display: none; /* Полностью скрыть контейнер с изображением */
     }
 
-    #p1-background {
-    }
-
-    #p1-container,
-    #p1-content {
-        padding: 0 5%; /* Отступы 5% слева и справа */
+    #p1-container {
+        padding: 40% 5%; /* Отступы 5% слева и справа */
         width: auto;
         height: auto; /* Высота по содержимому */
+        justify-content: flex-start; /* Центрируем контент по горизонтали */
+        background-image: url(../img/p1-bg.png);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 2rem; /* Добавляем отступ снизу */
+    }
+
+    #p1-background {
+        display: none;
+    }
+
+    #p1-content {
+        width: 100%;
+        height: calc(100vh - 16%);
     }
 
     #p1-content .text-block {
@@ -25,12 +35,14 @@
     }
 
     #headline1 {
-        font-size: 2rem; /* Уменьшаем размер шрифта */
-        line-height: 2.5rem; /* Соответствующая высота строки */
+        font-size: 1.875rem; /* 30px в рамах */
+        font-weight: 600; /* Semibold стиль */
+        margin-bottom: 0.9375rem; /* 15px в рамах */
+        line-height: 2.8125rem; /* Межстрочное расстояние 45px в рамах */
     }
 
     #cta-button {
-        font-size: 1.2rem; /* Уменьшаем размер шрифта */
+        font-size: 1.125rem; /* Уменьшение размера текста для ссылки */
         margin-bottom: 1rem; /* Уменьшаем отступ снизу */
     }
 }

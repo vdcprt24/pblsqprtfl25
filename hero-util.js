@@ -6,11 +6,6 @@ let lastAppliedColor = null;
 
 function defineColorMap() {
   const screenHeight = window.innerHeight;
-  let p1StartPostion = 3.2;
-
-  if (window.innerWidth <= 576) {
-    p1StartPostion = 2.5;
-  }
 
   const colorMap = [
     { start: 0, end: 1.1 * screenHeight, color: "#FFFFFF" },
@@ -22,17 +17,17 @@ function defineColorMap() {
     },
     {
       start: 1.6 * screenHeight,
-      end: p1StartPostion * screenHeight,
+      end: 3.2 * screenHeight,
       color: "#000000",
     },
     {
-      start: p1StartPostion * screenHeight,
-      end: (p1StartPostion + 0.2) * screenHeight,
+      start: 3.2 * screenHeight,
+      end: (3.2 + 0.2) * screenHeight,
       startColor: "#000000",
       endColor: "#FFFFFF",
     },
     {
-      start: (p1StartPostion + 0.2) * screenHeight,
+      start: (3.2 + 0.2) * screenHeight,
       end: Infinity,
       color: "#FFFFFF",
     },

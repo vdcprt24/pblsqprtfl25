@@ -31,6 +31,7 @@
         margin-top: 30%;
         align-items: center; /* Центрировать контент по вертикали */
         padding: 2rem 1rem; /* Добавить внутренние отступы */
+        color: #000;
     }
 
     #second-content {
@@ -57,12 +58,14 @@
     #third-section {
         height: auto; /* Высота по содержимому */
         padding: 2rem 1rem; /* Добавить внутренние отступы */
+        text-align: left;
+        align-items: flex-start;
+        color: #000;
     }
 
     #third-heading {
         font-size: 2rem; /* Уменьшить размер шрифта */
         line-height: 2.5rem; /* Соответствующая высота строки */
-        text-align: center; /* Оставить текст центрированным */
         opacity: 1; /* Сделать заголовок видимым, если это необходимо */
     }
 
