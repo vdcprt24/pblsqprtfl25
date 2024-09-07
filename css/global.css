@@ -12,6 +12,7 @@ html {
     transition: none !important; /* Отключаем все переходы для всех элементов */
     animation: none !important;
     will-change: background-color;
+    overflow-x: hidden; /* Убирает горизонтальный скролл */
 }
 
 #footer {

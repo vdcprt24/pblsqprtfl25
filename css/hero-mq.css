@@ -2,6 +2,8 @@
 
 @media (max-width: 576px) {
     #hero-container {
+        width: 100%; /* Блок занимает всю ширину */
+
         flex-direction: column; /* Смена направления флексов на колонку */
         justify-content: space-around; /* Выровнять контент по началу */
         padding: 20% 3%; /* Увеличить отступы */

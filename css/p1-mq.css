@@ -5,7 +5,7 @@
 
     #p1-container {
         padding: 40% 5%; /* Отступы 5% слева и справа */
-        width: auto;
+        width: 100%;
         height: auto; /* Высота по содержимому */
         justify-content: flex-start; /* Центрируем контент по горизонтали */
         background-image: url(../img/p1-bg.png);
