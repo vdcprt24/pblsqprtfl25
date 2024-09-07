@@ -32,10 +32,11 @@
         align-items: center; /* Центрировать контент по вертикали */
         padding: 2rem 1rem; /* Добавить внутренние отступы */
         color: #000;
+        width: auto;
     }
 
     #second-content {
-        width: 100%; /* Контент занимает всю ширину */
+        width: auto;
         margin-bottom: 1rem; /* Уменьшить отступ снизу */
     }
 
