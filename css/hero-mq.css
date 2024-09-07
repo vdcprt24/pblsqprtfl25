@@ -58,6 +58,7 @@
 
     #third-section {
         height: auto; /* Высота по содержимому */
+        width: auto;
         padding: 2rem 1rem; /* Добавить внутренние отступы */
         text-align: left;
         align-items: flex-start;
