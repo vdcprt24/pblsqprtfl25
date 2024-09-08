@@ -16,7 +16,7 @@ export function getScriptBaseUrl() {
   if (window.location.hostname.includes("localhost")) {
     return "";
   }
-  return "https://victorduco.github.io/portfolio24/";
+  return "https://vdcprt24.github.io/pblsqprtfl25/";
 }
 
 export function hexToRgb(hex) {
