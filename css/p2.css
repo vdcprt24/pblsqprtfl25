@@ -61,13 +61,8 @@
     letter-spacing: 1%; /* Межбуквенное расстояние */
 }
 
-/* Эффект на стрелку в ссылке */
-.project-link::after {
-    content: "→";
-    margin-left: 0.3125rem; /* 5px в рамах */
-    transition: margin-left 0.3s;
-}
-
-.project-link:hover::after {
-    margin-left: 0.625rem; /* 10px в рамах */
+.project-link img {
+    margin-left: 0.7rem;
+    display: inline;
+    transform: translateY(-1px) scale(1.15);
 }
