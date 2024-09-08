@@ -35,6 +35,7 @@
 
 /* Дополнительная информация о проекте */
 .text-content .project-details {
+    display: block;
     font-size: 1.1875rem; /* 19px в рамах */
     color: black; /* Чёрный текст */
     margin-bottom: 0.625rem; /* 10px в рамах */
@@ -44,6 +45,7 @@
 
 /* Заголовки */
 .text-content h2 {
+    display: block;
     font-size: 1.875rem; /* 30px в рамах */
     font-weight: 600; /* Semibold стиль */
     margin-bottom: 0.9375rem; /* 15px в рамах */
@@ -53,6 +55,7 @@
 
 /* Ссылка на проект */
 .project-link {
+    display: block;
     font-size: 1.375rem; /* 22px в рамах */
     font-weight: 500; /* Medium стиль */
     color: black; /* Чёрный текст */

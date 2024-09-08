@@ -1,10 +1,15 @@
 /* Полный сброс всех стилей для всех элементов without !important */
-* {
+html {
     all: unset;
-    animation: none;
-    transition: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+}
 /* Убираем что не нужно показывать */
 style,
 script,
