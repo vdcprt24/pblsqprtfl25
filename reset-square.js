@@ -1,19 +1,18 @@
 export function removeStyles() {
-  const heroSection = document.querySelector("#hero-section");
+  // Найдем элемент с id="all-content"
+  const allContent = document.querySelector("#all-content");
 
-  // Проходим по всем элементам на странице
-  let elements = document.body.querySelectorAll("*");
+  if (allContent) {
+    // Удаляем всё содержимое body
+    document.body.innerHTML = "";
 
-  for (let i = 0; i < elements.length; i++) {
-    let element = elements[i];
+    // Удаляем id и class у body
+    document.body.removeAttribute("id");
+    document.body.removeAttribute("class");
 
-    if (element === heroSection) {
-      // Как только дойдем до #hero-section, выводим 'meow' и прекращаем выполнение
-      break; // Прекращаем выполнение цикла
-    }
-
-    // Логируем элемент для отладки и удаляем классы и стили
-    element.removeAttribute("class");
-    element.removeAttribute("style");
+    // Перемещаем элемент с id="all-content" в корень body
+    document.body.appendChild(allContent);
+  } else {
+    console.error("Element with id 'all-content' not found.");
   }
 }
