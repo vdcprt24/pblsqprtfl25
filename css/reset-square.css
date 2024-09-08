@@ -3,6 +3,14 @@
     all: unset;
 }
 
+style,
+script,
+link,
+meta,
+head {
+    display: none !important;
+}
+
 /* Специфический сброс для основных тегов */
 body,
 div,
