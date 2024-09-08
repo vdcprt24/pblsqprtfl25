@@ -1,0 +1,115 @@
+/* Полный сброс всех стилей для всех элементов */
+* {
+    all: unset;
+}
+
+/* Специфический сброс для основных тегов */
+body,
+div,
+section,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+img,
+ul,
+ol,
+li,
+table,
+tr,
+td,
+th,
+footer,
+header,
+main {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Сброс для кнопок и интерактивных элементов */
+button,
+input,
+textarea,
+select {
+    all: unset;
+    font: inherit;
+    color: inherit;
+}
+
+/* Сброс для изображений и медиа */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Убираем стили Squarespace */
+[class*="tweak-"],
+[id*="sqs-"],
+[class*="sqs-"],
+[class*="collection-"],
+[class*="full-bleed-section"],
+[class*="section-height--"],
+[class*="content-width--"] {
+    all: unset;
+}
+
+/* Сброс анимаций */
+* {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Сброс стилей для контейнеров */
+.container,
+.site-wrapper,
+.clearfix {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+/* Сброс для ссылок и текста */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit !important;
+    font-weight: normal !important;
+    line-height: normal !important;
+}
+
+/* Убираем лишние отступы и размеры */
+[class^="sqs-"] {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+}
