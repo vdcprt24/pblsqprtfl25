@@ -1,4 +1,4 @@
-@media (max-width: 576px) {
+@media (max-width: 1050px) {
     #p2-container {
         flex-direction: column; /* Смена направления на колонку */
         gap: 3rem; /* Увеличение промежутка между блоками */
@@ -20,5 +20,41 @@
 
     .project-link {
         font-size: 1.125rem; /* Уменьшение размера текста для ссылки */
+    }
+}
+
+/* tablets */
+
+@media (min-width: 1051px) and (max-width: 1400px) {
+    /* Отступы слева и справа меньше */
+    #p2-container {
+        padding: 0 3.5%; /* Уменьшаем отступы до 3% */
+    }
+
+    /* Отступы между элементами меньше */
+    #p2-container {
+        gap: 2rem; /* Уменьшаем расстояние между элементами */
+    }
+
+    /* Отступы в блоке текста меньше */
+    .text-content {
+        margin-top: 1rem; /* Уменьшаем отступ сверху */
+    }
+
+    .text-content .project-details {
+        margin-bottom: 0.5rem; /* Уменьшаем отступ снизу */
+    }
+
+    .text-content h2 {
+        margin-bottom: 0.75rem; /* Уменьшаем отступ снизу заголовка */
+    }
+
+    /* Отступ на стрелку в ссылке чуть меньше */
+    .project-link::after {
+        margin-left: 0.25rem; /* Уменьшаем отступ для стрелки */
+    }
+
+    .project-link:hover::after {
+        margin-left: 0.5rem; /* Уменьшаем эффект при наведении */
     }
 }

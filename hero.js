@@ -28,7 +28,7 @@ function onScroll() {
 
 function handleScroll(scrollPosition) {
   let p1scrollPosition = scrollPosition * 1.1;
-  if (window.innerWidth <= 576) {
+  if (window.innerWidth <= 1050) {
     scrollPosition = scrollPosition * 1.1;
     p1scrollPosition = scrollPosition * 2;
   } else {
@@ -48,7 +48,7 @@ function handleScroll(scrollPosition) {
     1.5,
   );
   setElementTransition(scrollPosition, "part-3", 0, 1, 1.6, 1.7);
-  if (window.innerWidth > 576) {
+  if (window.innerWidth > 1050) {
     setElementTransition(scrollPosition, "second-section", 1, 0, 2.1, 2.2);
     setElementTransition(scrollPosition, "third-heading", 0, 1, 2.1, 2.3);
     setElementTransition(scrollPosition, "arrow-icon", 0, 1, 2.3, 2.5);

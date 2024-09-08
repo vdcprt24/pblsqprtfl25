@@ -1,7 +1,7 @@
 import { getScriptBaseUrl } from "./util.js";
 import { preloadImages } from "./image-preload.js";
 
-const MIN_SCREEN_WIDTH = 576; // Минимальный размер экрана
+const MIN_SCREEN_WIDTH = 1050; // Минимальный размер экрана
 let masterTimeline; // Переменная для хранения таймлайна
 
 export function initVideoAnimation() {

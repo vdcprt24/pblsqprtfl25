@@ -12,7 +12,7 @@
 
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, user-scalable=1 "
+            content="width=device-width, initial-scale=1.0, user-scalable=1"
         />
 
         <meta
@@ -27,32 +27,42 @@
         <script type="module" src="./main.js"></script>
     </head>
     <body>
-        <div id="hero-container">
-            <div id="hero-content">
-                <div class="block" id="block-1">
-                    <h1>
-                        <span>Product Designer</span><br />
-                        Who Simplifies
-                        <span class="text-gradient">Tech</span> for Greater
-                        Impact
-                    </h1>
+        <div id="hero-section">
+            <!-- Контейнер с двумя блоками: левый и правый -->
+            <div id="content-wrapper">
+                <!-- Левый блок с вложенной структурой (сверху и снизу) -->
+                <div class="content-block" id="left-block">
+                    <!-- Верхний текст -->
+                    <div class="content-top">
+                        <h1>
+                            <span>Product Designer</span><br />
+                            Who Simplifies
+                            <span class="text-gradient">Tech</span> for Greater
+                            Impact
+                        </h1>
+                    </div>
+                    <!-- Ссылки внизу -->
+                    <div class="content-bottom" id="links-block">
+                        <a href="https://linkedin.com" target="_blank"
+                            >LinkedIn
+                            <img src="img/arrow-right.svg" alt="" /></a
+                        ><br />
+                        <a href="mailto:email@example.com" target="_blank"
+                            >Email <img src="img/arrow-right.svg" alt="" /></a
+                        ><br />
+                        <a href="resume.pdf" target="_blank"
+                            >Resume <img src="img/arrow-right.svg" alt=""
+                        /></a>
+                    </div>
                 </div>
-                <div class="block" id="block-2">
+
+                <!-- Правый блок с изображением -->
+                <div class="content-block" id="right-block">
                     <img src="img/main2.png" alt="Victor Diukov" />
-                </div>
-                <div class="block" id="block-3">
-                    <a href="https://linkedin.com" target="_blank"
-                        >LinkedIn <img src="img/arrow-right.svg" alt="" /></a
-                    ><br />
-                    <a href="mailto:email@example.com" target="_blank"
-                        >Email <img src="img/arrow-right.svg" alt="" /></a
-                    ><br />
-                    <a href="resume.pdf" target="_blank"
-                        >Resume <img src="img/arrow-right.svg" alt=""
-                    /></a>
                 </div>
             </div>
         </div>
+
         <div id="second-section">
             <div id="second-content">
                 <p>

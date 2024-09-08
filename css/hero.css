@@ -1,54 +1,40 @@
-/* First Section */
-#hero-container {
+/* Hero Section */
+#hero-section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch; /* Выровнять элементы по всей высоте */
+    flex-direction: row; /* Разместить блоки горизонтально */
+    justify-content: space-between; /* Прижать блоки к краям */
+    align-items: stretch; /* Растянуть элементы по высоте */
     padding: 2% 3%;
     height: 100vh; /* Полная высота экрана */
-    box-sizing: border-box; /* Учесть padding при расчете высоты */
+    box-sizing: border-box; /* Учитываем padding */
 }
 
-#hero-content {
+#content-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: space-between; /* Пространство между блоками */
+    align-items: stretch; /* Растягиваем блоки по высоте */
     width: 100%;
 }
 
-.block {
-    flex: 1;
+#left-block {
+    display: flex;
+    flex-grow: 1; /* Левый блок растягивается, занимая всё доступное пространство */
+    flex-shrink: 1; /* Левый блок сжимается при необходимости */
+    flex-direction: column; /* Вложенные элементы идут вертикально */
+    justify-content: space-between; /* Верхний текст и ссылки внизу */
+    min-width: 0;
 }
 
-#block-1 {
-    align-self: flex-start; /* Прижать текст вверх */
-}
-
-#block-1 h1 {
+#left-block h1 {
     font-size: 3.75rem; /* 60px */
     line-height: 4.8125rem; /* 77px */
     font-weight: 600; /* semibold */
     letter-spacing: 2%;
     margin: 0;
+    max-width: 80%; /* Ограничиваем ширину текста */
 }
 
-/* Second Section */
-
-#block-2 {
-    display: flex;
-    justify-content: flex-end; /* Прижать картинку вправо */
-    align-items: center; /* Центрировать по вертикали, если нужно */
-}
-
-#block-2 img {
-    width: auto;
-    height: calc(100% - 2rem); /* Высота с учетом отступов */
-    object-fit: contain;
-    margin: 0 1rem; /* Отступ слева и справа */
-    border-radius: 0;
-}
-
-#block-3 a {
+#links-block a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -58,25 +44,28 @@
     margin-bottom: 1rem;
 }
 
-#block-3 a:hover {
-}
-
-#block-3 a:hover img {
+#links-block a:hover img {
     display: inline;
 }
 
-#block-3 img {
+#links-block img {
     margin-left: 0.5rem;
     display: none;
-    transform: translateY(1px); /* Сдвиг вниз на 1 пиксель */
+    transform: translateY(1px); /* Небольшой сдвиг вниз */
 }
 
-#block-3 {
-    text-align: left;
-    position: absolute;
-    bottom: 5%;
-    left: 0; /* Убрать дополнительный отступ слева */
-    padding-left: 3%; /* Задать padding для отступа вместо left */
+#right-block {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto; /* Устанавливаем ширину по содержимому */
+    display: flex;
+    justify-content: flex-end; /* Картинка прижата вправо */
+}
+
+#right-block img {
+    width: 56vh;
+    height: 90vh; /* Картинка растягивается по высоте блока */
+    object-fit: contain; /* Картинка не искажается */
 }
 
 /* Second Section */
@@ -117,9 +106,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #third-heading {
@@ -132,9 +119,10 @@
 }
 
 .centered-image {
-    display: none;
-    justify-content: center; /* Центрируем изображение */
     width: 100%; /* Заставляем div занимать всю ширину */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #arrow-icon {

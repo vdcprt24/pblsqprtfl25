@@ -1,4 +1,4 @@
-@media (max-width: 576px) {
+@media (max-width: 1050px) {
     #image-sequence-container {
         display: none; /* Полностью скрыть контейнер с изображением */
     }
@@ -44,5 +44,34 @@
     #cta-button {
         font-size: 1.125rem; /* Уменьшение размера текста для ссылки */
         margin-bottom: 1rem; /* Уменьшаем отступ снизу */
+    }
+}
+
+/* tablets */
+@media (min-width: 1051px) and (max-width: 1400px) {
+    /* Меньший отступ до края страницы */
+    #p1-content,
+    #p1-background {
+        width: calc(100% - 7%);
+        height: calc(100vh - 8%);
+    }
+
+    /* Большой текст меньше */
+    #headline1 {
+        font-size: 3rem; /* Уменьшаем размер текста */
+        line-height: 78px; /* Корректируем высоту строки */
+    }
+
+    /* Ссылка чуть больше */
+    #cta-button {
+        font-size: 1.5rem; /* Увеличиваем размер ссылки */
+    }
+
+    /* Картинка не должна обрезаться или выходить за пределы блока */
+    #image-sequence {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Картинка сохраняет свои пропорции и не обрезается */
+        transform: translate(-50%, -50%);
     }
 }

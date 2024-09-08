@@ -1,36 +1,38 @@
 /* mob phones */
 
-@media (max-width: 576px) {
-    #hero-container {
+@media (max-width: 1050px) {
+    #hero-section {
         width: 100%; /* Блок занимает всю ширину */
-
         flex-direction: column; /* Смена направления флексов на колонку */
-        justify-content: space-around; /* Выровнять контент по началу */
-        padding: 20% 3%; /* Увеличить отступы */
+        justify-content: space-between; /* Выровнять контент */
+        padding: 10% 3%; /* Увеличить отступы */
+        height: 100vh; /* Полная высота экрана */
     }
 
-    #hero-content {
+    #content-wrapper {
         align-items: center;
+        flex-direction: column; /* Смена направления на колонку */
+        height: 100%;
     }
 
-    .block {
-        width: 100%; /* Блок занимает всю ширину */
+    .content-block {
+        width: 100%; /* Блоки занимают всю ширину */
         margin-bottom: 20px; /* Добавить отступы между блоками */
     }
 
-    #block-1 h1 {
-        font-size: 3rem; /* Уменьшить размер шрифта */
-        line-height: 3.5rem; /* Соответствующая высота строки */
+    #left-block h1 {
+        font-size: clamp(2rem, 6vw, 4rem); /* Минимум 2rem, адаптивный 4vw, максимум 3rem */
+        line-height: clamp(2.5rem, 7vw, 4.5rem); /* Минимум 2.5rem, адаптивный 5vw, максимум 3.5rem */
     }
 
-    #block-2 {
-        display: none; /* Скрыть изображение */
+    #right-block {
+        display: none; /* Скрыть изображение на маленьких экранах */
     }
 
-    #block-3 {
-        max-width: 90%; /* Скрыть изображение */
+    #links-block a {
+        font-size: clamp(1rem, 2.5vw, 1.5rem); /* Минимум 1rem, адаптивный 2.5vw, максимум 1.5rem */
+        line-height: clamp(1.25rem, 3vw, 2rem); /* Минимум 1.25rem, адаптивный 3vw, максимум 2rem */
     }
-
     /* 2nd section */
 
     #second-section {
@@ -78,6 +80,8 @@
     }
 
     .centered-image {
+        display: none;
+        justify-content: center; /* Центрируем изображение */
         width: 100%; /* Занять всю ширину */
         margin-top: 1rem; /* Добавить отступ сверху */
     }
@@ -89,18 +93,26 @@
     }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-    /* Стили для маленьких планшетов */
-}
 
-@media (min-width: 769px) and (max-width: 992px) {
-    /* Стили для планшетов и маленьких ноутбуков */
-}
+/* Стили для ноутбуков и больших планшетов */
+@media (min-width: 1051px) and (max-width: 1500px) {
+    /* Отступы вне контейнера чуть меньше */
+       #hero-section {
+           padding: 1.5% 2%;
+       }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-    /* Стили для ноутбуков и больших планшетов */
-}
+       /* Текст в левом блоке чуть меньше */
+       #left-block h1 {
+              font-size: 4vw; /* Размер текста зависит от ширины экрана */
+              line-height: 5vw; /* Соответствующая высота строки */
+          }
 
-@media (min-width: 1201px) {
+
+       /* Увеличить размер текста ссылок */
+       #links-block a {
+           font-size: 1.3rem;
+       }
+
+@media (min-width: 1400px) {
     /* Стили для больших экранов и десктопов */
 }
