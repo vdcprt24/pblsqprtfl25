@@ -32,6 +32,10 @@ span.text-gradient {
     animation: gradient-animation 10s ease infinite;
 }
 
+a {
+    text-decoration: none;
+}
+
 #scroll-indicator {
     position: fixed;
     top: 10px;

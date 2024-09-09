@@ -36,8 +36,8 @@
 /* Дополнительная информация о проекте */
 .text-content .project-details {
     display: block;
-    font-size: 1.1875rem; /* 19px в рамах */
-    color: black; /* Чёрный текст */
+    font-size: 1rem; /* 19px в рамах */
+    color: #444444; /* Чёрный текст */
     margin-bottom: 0.625rem; /* 10px в рамах */
     font-weight: 500; /* Medium стиль */
     letter-spacing: 0.01rem;

@@ -42,7 +42,6 @@
 }
 
 #p1-content .text-block {
-    color: #000000; /* Черный цвет текста */
     margin-left: 5%; /* Отступ слева */
     z-index: 10; /* Поверх других элементов */
     margin-top: auto;
@@ -52,6 +51,7 @@
 #tags {
     font-size: 1.375rem; /* 22px в rem (22px / 16px = 1.375rem) */
     font-weight: 500; /* Полужирный текст */
+    color: #444444;
     margin-top: 2%; /* Отступ сверху */
     letter-spacing: 0.01em; /* Межбуквенное расстояние (1%) */
     max-width: 60%; /* Ограничение ширины заголовка */
@@ -60,6 +60,7 @@
 #headline1 {
     font-size: 3.25rem; /* 52px в rem (52px / 16px = 3.25rem) */
     font-weight: 600; /* Полужирный текст */
+    color: #000000; /* Черный цвет текста */
     line-height: 83px; /* Межстрочное расстояние — 83px */
 }
 
@@ -67,6 +68,7 @@
     font-size: 1.4rem; /* 27px в rem (27px / 16px = 1.6875rem) */
     font-weight: 500; /* Полужирный текст */
     letter-spacing: 0.01em; /* Межбуквенное расстояние (1%) */
+    color: #000000; /* Черный цвет текста */
     background-color: transparent; /* Фон отсутствует */
     border: none; /* Без рамки */
     cursor: pointer;
@@ -74,8 +76,10 @@
     margin-bottom: 2%;
 }
 
-#cta-button:hover {
-    color: #e65b55; /* Изменение цвета текста при наведении */
+#cta-button img {
+    margin-left: 0.4rem;
+    display: inline;
+    transform: translateY(-1px) scale(1.15);
 }
 
 #image-sequence-container {
