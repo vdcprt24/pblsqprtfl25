@@ -25,9 +25,9 @@ export function initVideoAnimation() {
 }
 
 export function setupVideoAnimation(loadedImages) {
-  const startFrame = 250;
-  const endFrame = 507;
-  const animationEndFrame = 600;
+  const startFrame = 0;
+  const endFrame = 430;
+  const animationEndFrame = 500;
   const frameCount = endFrame - startFrame + 1;
   const animationFrameCount = animationEndFrame - startFrame + 1;
   const imageElement = document.getElementById("image-sequence");

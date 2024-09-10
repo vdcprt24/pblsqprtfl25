@@ -14,13 +14,14 @@ export function preloadImages() {
 // Генерация списка изображений
 function generateImageUrls() {
   let url = getScriptBaseUrl();
-
   let folder = "frames_1";
-  let start = 205;
-  let end = 507;
+  let start = 1001;
+  let end = 1430;
   let imageUrls = [];
+
   for (let i = start; i <= end; i++) {
-    imageUrls.push(`${url}${folder}/p1${i}.webp`);
+    let paddedNumber = i.toString().padStart(4, "0"); // Добавление нулей, если номер короче 4 цифр
+    imageUrls.push(`${url}${folder}/p${paddedNumber}.webp`);
   }
   return imageUrls;
 }

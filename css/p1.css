@@ -25,7 +25,7 @@
     height: calc(100vh - 16%); /* Высота такая же, как у #p1-content */
     background-image: url("../img/p1-bg.png");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     z-index: -1; /* Размещаем позади контента */
 }
 
@@ -37,7 +37,7 @@
     justify-content: center;
     box-sizing: border-box;
     width: calc(100% - 10%); /* Ширина с учетом отступов */
-    height: calc(100vh - 16%); /* Высота с учетом отступов */
+    height: calc(100vh - 40%); /* Высота с учетом отступов */
     z-index: 1; /* Устанавливаем, чтобы контент был выше фона */
 }
 
@@ -49,9 +49,9 @@
 }
 
 #tags {
-    font-size: 1.375rem; /* 22px в rem (22px / 16px = 1.375rem) */
-    font-weight: 500; /* Полужирный текст */
-    color: #e9e9e9;
+    font-size: 1.2rem; /* 22px в rem (22px / 16px = 1.375rem) */
+    font-weight: 300; /* Полужирный текст */
+    color: #dcdcdc;
     margin-top: 2%; /* Отступ сверху */
     letter-spacing: 0.01em; /* Межбуквенное расстояние (1%) */
     max-width: 60%; /* Ограничение ширины заголовка */
@@ -59,10 +59,10 @@
 
 #headline1 {
     font-size: 3.5rem; /* 52px в rem (52px / 16px = 3.25rem) */
-    font-weight: 600; /* Полужирный текст */
+    font-weight: 500; /* Полужирный текст */
     color: #ffffff; /* Черный цвет текста */
     line-height: 83px; /* Межстрочное расстояние — 83px */
-    max-width: 55%;
+    max-width: 50%;
 }
 
 #cta-button {
