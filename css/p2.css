@@ -1,9 +1,89 @@
 /* Основной контейнер с отступами */
-#p2-container {
-    display: flex;
-    justify-content: space-between;
+
+.p2-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    padding: 0 5%; /* Отступы 5% слева и справа */
+    padding: 2% 3% 3% 3%; /* Отступы 5% слева и справа */
+}
+
+.p2-header h1 {
+    font-size: 2.5rem; /* 60px */
+    line-height: 4.8125rem; /* 77px */
+    font-weight: 600; /* semibold */
+    letter-spacing: 2%;
+    margin: 0;
+    max-width: 80%; /* Ограничиваем ширину текста */
+}
+
+/* Основной контейнер с отступами */
+
+#container {
+    min-height: 90vh; /* Полная высота экрана */
+    width: 100vw;
+    box-sizing: border-box; /* Учитываем padding */
+    background-color: #fbfbfd; /* Для наглядности */
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    margin-top: 5%;
+}
+
+.expertise-section {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+
+.expertise-item {
+    width: 50%; /* Two items per row */
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.expertise-number {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #777;
+    width: 50px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.expertise-item h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.expertise-item p {
+    font-size: 1em;
+    margin: 0;
+    color: #777;
+    text-align: left;
+}
+
+.expertise-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-item h2,
+.expertise-item p {
+    text-align: left;
+}
+
+/* Основной контейнер с отступами */
+
+#p2-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 0 3%; /* Отступы 5% слева и справа */
+    cursor: pointer;
 }
 
 /* Блоки */
@@ -12,10 +92,14 @@
     flex-direction: column;
     align-items: flex-start; /* Текст по левому краю */
     width: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .image-content {
     width: 100%; /* Картинки занимают 100% ширины блока */
+    cursor: pointer;
 }
 
 /* Картинки */
@@ -28,19 +112,24 @@
 
 /* Стили для текста */
 .text-content {
-    margin-top: 1.25rem; /* 20px в рамах */
+    margin-top: 0.5rem; /* 20px в рамах */
     text-align: left; /* Текст по левому краю */
     color: black; /* Чёрный текст */
+    cursor: pointer;
 }
 
 /* Дополнительная информация о проекте */
 .text-content .project-details {
-    display: block;
+    display: flex;
     font-size: 1rem; /* 19px в рамах */
-    color: #444444; /* Чёрный текст */
+    color: #666; /* Чёрный текст */
     margin-bottom: 0.625rem; /* 10px в рамах */
-    font-weight: 500; /* Medium стиль */
+    font-weight: 400; /* Medium стиль */
     letter-spacing: 0.01rem;
+    justify-content: space-between;
+}
+
+.text-content .company-name {
 }
 
 /* Заголовки */

@@ -11,9 +11,16 @@ html {
     -webkit-overflow-scrolling: touch; /* Специфическое свойство для iOS */
     width: 100%;
     font-size: 16px; /* 1rem = 16px */
-    transition: none !important; /* Отключаем все переходы для всех элементов */
-    animation: none !important;
     will-change: background-color;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease; /* 1 секунда для плавного появления */
+}
+
+.visible-body {
+    opacity: 1;
 }
 
 #footer {
@@ -22,7 +29,7 @@ html {
     margin-top: 50px; /* Отступ сверху, если нужно разделить футер от предыдущего контента */
 }
 
-span.text-gradient {
+.text-gradient {
     font-weight: 700; /* bold */
     background-image: linear-gradient(122deg, #00dbde 0%, #fc00ff 100%);
     background-size: 300%;

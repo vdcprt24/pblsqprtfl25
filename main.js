@@ -7,16 +7,17 @@ import { removeStyles } from "./reset-square.js";
 
 window.onload = function () {
   window.scrollTo(0, 0);
-  initVideoAnimation();
-  setupHeroScroll();
-  calculateColors();
+  // initVideoAnimation();
+  // setupHeroScroll();
+  // calculateColors();
   // setupScrollIndicator();
 
-  initLenis();
+  // initLenis();
 };
 
-window.addEventListener("resize", initVideoAnimation);
+// window.addEventListener("resize", initVideoAnimation);
 
 document.addEventListener("DOMContentLoaded", function () {
   removeStyles();
+  document.body.classList.add("visible-body");
 });
