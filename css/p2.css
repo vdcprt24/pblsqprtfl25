@@ -132,12 +132,16 @@
 .text-content .company-name {
 }
 
+.text-content p {
+    margin-top: 0;
+}
 /* Заголовки */
 .text-content h2 {
     display: block;
     font-size: 1.875rem; /* 30px в рамах */
     font-weight: 600; /* Semibold стиль */
     margin-bottom: 0.9375rem; /* 15px в рамах */
+    margin-top: 0;
     line-height: 2.8125rem; /* Межстрочное расстояние 45px в рамах */
     color: black; /* Чёрный текст */
 }
