@@ -19,5 +19,5 @@ window.onload = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   removeStyles();
-  document.body.classList.add("visible-body");
+  // document.body.classList.add("visible-body");
 });
