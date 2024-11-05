@@ -1,60 +1,43 @@
+/* Адаптивный CSS */
+
+/* Для экранов шириной до 1050px: один блок на строке */
 @media (max-width: 1050px) {
+    .p2-header,
     #p2-container {
-        flex-direction: column; /* Смена направления на колонку */
-        gap: 3rem; /* Увеличение промежутка между блоками */
+        grid-template-columns: 1fr;
     }
 
-    .new-block {
-        width: 100%; /* Каждый блок занимает всю ширину */
+    /* Уменьшаем отступы для маленьких экранов */
+    .p2-header {
+        padding: 2% 5%;
     }
 
-    /* Уменьшаем размер текста */
+    #p2-container {
+        padding: 0 5%;
+    }
+
+    /* Регулируем размер шрифта для заголовков */
+    .p2-header h1 {
+        font-size: 2rem; /* Меньше размер для маленьких экранов */
+        line-height: 3rem;
+    }
+
     .text-content h2 {
-        font-size: 1.5rem; /* Уменьшение размера заголовка */
-        line-height: 2.25rem; /* Соответствующая высота строки */
-    }
-
-    .text-content .project-details {
-        font-size: 1rem; /* Уменьшение размера текста для деталей */
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 
     .project-link {
-        font-size: 1.125rem; /* Уменьшение размера текста для ссылки */
+        font-size: 1.125rem;
     }
 }
 
-/* tablets */
-
+/* Для экранов от 1051px до 1400px: два блока на строке */
 @media (min-width: 1051px) and (max-width: 1400px) {
-    /* Отступы слева и справа меньше */
+    .p2-header,
     #p2-container {
-        padding: 0 3.5%; /* Уменьшаем отступы до 3% */
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Отступы между элементами меньше */
-    #p2-container {
-        gap: 2rem; /* Уменьшаем расстояние между элементами */
-    }
-
-    /* Отступы в блоке текста меньше */
-    .text-content {
-        margin-top: 1rem; /* Уменьшаем отступ сверху */
-    }
-
-    .text-content .project-details {
-        margin-bottom: 0.5rem; /* Уменьшаем отступ снизу */
-    }
-
-    .text-content h2 {
-        margin-bottom: 0.75rem; /* Уменьшаем отступ снизу заголовка */
-    }
-
-    /* Отступ на стрелку в ссылке чуть меньше */
-    .project-link::after {
-        margin-left: 0.25rem; /* Уменьшаем отступ для стрелки */
-    }
-
-    .project-link:hover::after {
-        margin-left: 0.5rem; /* Уменьшаем эффект при наведении */
-    }
+    /* Отступы и размеры шрифтов остаются как в основном CSS */
 }

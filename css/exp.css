@@ -1,0 +1,60 @@
+/* Основной контейнер с отступами */
+
+#container {
+    min-height: 90vh; /* Полная высота экрана */
+    width: 100vw;
+    box-sizing: border-box; /* Учитываем padding */
+    background-color: #fbfbfd; /* Для наглядности */
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    margin-top: 5%;
+    padding-top: 2%;
+}
+
+.expertise-section {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+
+.expertise-item {
+    width: 50%; /* Two items per row */
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.expertise-number {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #777;
+    width: 50px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.expertise-item h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.expertise-item p {
+    font-size: 1em;
+    margin: 0;
+    color: #777;
+    text-align: left;
+}
+
+.expertise-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-item h2,
+.expertise-item p {
+    text-align: left;
+}
